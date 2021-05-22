@@ -1,0 +1,15 @@
+{
+    "name": "habibkoe/niagahoster-test",
+    "description": "Landing page for online test niagahoster",
+    "type": "project",
+    "license": "Habibkoe",
+    "authors": [
+        {
+            "name": "habibkoe",
+            "email": "mhabiburrahman000@gmail.com"
+        }
+    ],
+    "require": {
+        "twig/twig": "^3.3"
+    }
+}
