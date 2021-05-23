@@ -132,55 +132,28 @@
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="card-deck mb-3 text-center">
-                        <div class="card mb-4 shadow-sm">
-                        <div class="card-header">
-                            <h4 class="my-0 font-weight-normal">Free</h4>
+            <div class="col-md-12">
+                <div class="card-deck mb-3 text-center">
+                    {% for paket in content.products.data %}
+                    <div class="card mb-4 mr-0 ml-0 shadow-sm">
+                        <div class="card-header {% if paket.is_popular == true %} bg-primary text-white {% endif %}">
+                            <h4 class="my-0 font-weight-normal">{{paket.name}}</h4>
                         </div>
-                        <div class="card-body">
-                            <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>
-                            <ul class="list-unstyled mt-3 mb-4">
-                            <li>10 users included</li>
-                            <li>2 GB of storage</li>
-                            <li>Email support</li>
-                            <li>Help center access</li>
-                            </ul>
-                            <button type="button" class="btn btn-lg btn-block btn-outline-primary">Sign up for free</button>
-                        </div>
-                        </div>
-                        <div class="card mb-4 shadow-sm">
-                        <div class="card-header">
-                            <h4 class="my-0 font-weight-normal">Pro</h4>
-                        </div>
-                        <div class="card-body">
-                            <h1 class="card-title pricing-card-title">$15 <small class="text-muted">/ mo</small></h1>
-                            <ul class="list-unstyled mt-3 mb-4">
-                            <li>20 users included</li>
-                            <li>10 GB of storage</li>
-                            <li>Priority email support</li>
-                            <li>Help center access</li>
-                            </ul>
-                            <button type="button" class="btn btn-lg btn-block btn-primary">Get started</button>
-                        </div>
-                        </div>
-                        <div class="card mb-4 shadow-sm">
-                        <div class="card-header">
-                            <h4 class="my-0 font-weight-normal">Enterprise</h4>
-                        </div>
-                        <div class="card-body">
-                            <h1 class="card-title pricing-card-title">$29 <small class="text-muted">/ mo</small></h1>
-                            <ul class="list-unstyled mt-3 mb-4">
-                            <li>30 users included</li>
-                            <li>15 GB of storage</li>
-                            <li>Phone and email support</li>
-                            <li>Help center access</li>
-                            </ul>
-                            <button type="button" class="btn btn-lg btn-block btn-primary">Contact us</button>
-                        </div>
+                        <div class="card-body p-0">
+                            <div style="border-bottom: 1px solid #ddd;" class="p-2 {% if paket.is_popular == true %} bg-primary text-white {% endif %}">
+                                {{paket.price |number_format(0, ',', '.')}}
+                                <br>
+                                {{paket.promo_price |number_format(0, ',', '.')}}
+                            </div>
+                            <div style="border-bottom: 1px solid #ddd;" class="p-2 {% if paket.is_popular == true %} bg-primary text-white {% endif %}">
+                                <b>{{paket.customer_total|number_format(0, ',', '.')}}</b> Pengguna Terdaftar
+                            </div>
+                            <div class="p-2">
+                                {{paket.description | raw}}
+                            </div>
                         </div>
                     </div>
+                    {% endfor %}
                 </div>
             </div>
 
@@ -271,60 +244,171 @@
                     <h3>Modul Lengkap untuk Menjalankan Aplikasi PHP Anda.</h3>
                 </div>
                 <div class="col-md-3">
-                    
+                    <ul>
+                        {% for m_one in content.modul_one %}
+                            <li>{{ m_one }}</li>
+                        {% endfor %}
+                    </ul>
                 </div>
                 <div class="col-md-3">
-                    
+                    <ul>
+                        {% for m_two in content.modul_two %}
+                            <li>{{ m_two }}</li>
+                        {% endfor %}
+                    </ul>
                 </div>
                 <div class="col-md-3">
+                    <ul>
+                        {% for m_three in content.modul_three %}
+                            <li>{{ m_three }}</li>
+                        {% endfor %}
+                    </ul>
                 </div>
                 <div class="col-md-3">
-                    
+                    <ul>
+                        {% for m_four in content.modul_four %}
+                            <li>{{ m_four }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="col-md-12 text-center">
+                    <a href="http://" class="btn btn-outline-secondary rounded-pill btn-xl">Selengkapnya</a>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Linux Hosting yang Stabil dengan Teknologi LVE</h4>
+                    <p>SuperMicro Intel Xeon 24-Cores server dengan RAM 128 GB dan teknologi LVE CloudLinux untuk stabilitas server Anda. Dilengkapi dengan SSD untuk keepatan MySQL dan caching. Apache load balancer berbasis LiteSpeed Technologies, CageFS Security. Raid-10 protection dan auto backup untuk keamanan website PHP Anda</p>
+
+                    <a href="http://" class="btn btn-outline-primary rounded-pill btn-xl">Pilih Hosting Anda</a>
+                </div>
+                <div class="col-md-6">
+                    <img src="assets/img/image_support.png" alt="" width="100%">
                 </div>
             </div>
         </div>
 
-        <div class="container">
-        
+        <div class="footer-grey">
+            <div class="container">
+                <div class="raw">
+                    <div class="col-md-6 p-0">
+                        <b>Bagikan jika Anda menyukai halaman ini</b>
+                    </div>
+                    <duv class="col-md-6 p-0">
 
-        <footer class="pt-4 my-md-5 pt-md-5 border-top">
-            <div class="row">
-            <div class="col-12 col-md">
-                <img class="mb-2" src="/docs/4.6/assets/brand/bootstrap-solid.svg" alt="" width="24" height="24">
-                <small class="d-block mb-3 text-muted">&copy; 2017-2021</small>
+                    </duv>
+                </div>
             </div>
-            <div class="col-6 col-md">
-                <h5>Features</h5>
-                <ul class="list-unstyled text-small">
-                <li><a class="text-muted" href="#">Cool stuff</a></li>
-                <li><a class="text-muted" href="#">Random feature</a></li>
-                <li><a class="text-muted" href="#">Team feature</a></li>
-                <li><a class="text-muted" href="#">Stuff for developers</a></li>
-                <li><a class="text-muted" href="#">Another one</a></li>
-                <li><a class="text-muted" href="#">Last time</a></li>
-                </ul>
+        </div>
+
+        <div class="footer-blue">
+            <div class="container">
+                <div class="raw">
+                    <div class="col-md-6 p-0 text-white">
+                        Perlu bantuan? Hubungi Kami: {{setting.phone}}
+                    </div>
+                    <duv class="col-md-6 p-0">
+
+                    </duv>
+                </div>
             </div>
-            <div class="col-6 col-md">
-                <h5>Resources</h5>
-                <ul class="list-unstyled text-small">
-                <li><a class="text-muted" href="#">Resource</a></li>
-                <li><a class="text-muted" href="#">Resource name</a></li>
-                <li><a class="text-muted" href="#">Another resource</a></li>
-                <li><a class="text-muted" href="#">Final resource</a></li>
-                </ul>
-            </div>
-            <div class="col-6 col-md">
-                <h5>About</h5>
-                <ul class="list-unstyled text-small">
-                <li><a class="text-muted" href="#">Team</a></li>
-                <li><a class="text-muted" href="#">Locations</a></li>
-                <li><a class="text-muted" href="#">Privacy</a></li>
-                <li><a class="text-muted" href="#">Terms</a></li>
-                </ul>
-            </div>
+        </div>
+        <footer class="pt-4 pt-md-5 bg-secondary text-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 col-md">
+                        <h5>Features</h5>
+                        <ul class="list-unstyled text-small">
+                        <li><a href="#">Cool stuff</a></li>
+                        <li><a href="#">Random feature</a></li>
+                        <li><a href="#">Team feature</a></li>
+                        <li><a href="#">Stuff for developers</a></li>
+                        <li><a href="#">Another one</a></li>
+                        <li><a href="#">Last time</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md">
+                        <h5>Features</h5>
+                        <ul class="list-unstyled text-small">
+                        <li><a href="#">Cool stuff</a></li>
+                        <li><a href="#">Random feature</a></li>
+                        <li><a href="#">Team feature</a></li>
+                        <li><a href="#">Stuff for developers</a></li>
+                        <li><a href="#">Another one</a></li>
+                        <li><a href="#">Last time</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md">
+                        <h5>Resources</h5>
+                        <ul class="list-unstyled text-small">
+                        <li><a href="#">Resource</a></li>
+                        <li><a href="#">Resource name</a></li>
+                        <li><a href="#">Another resource</a></li>
+                        <li><a href="#">Final resource</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md">
+                        <h5>About</h5>
+                        <ul class="list-unstyled text-small">
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Locations</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Terms</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 col-md">
+                        <h5>Features</h5>
+                        <ul class="list-unstyled text-small">
+                        <li><a href="#">Cool stuff</a></li>
+                        <li><a href="#">Random feature</a></li>
+                        <li><a href="#">Team feature</a></li>
+                        <li><a href="#">Stuff for developers</a></li>
+                        <li><a href="#">Another one</a></li>
+                        <li><a href="#">Last time</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md">
+                        <h5>Features</h5>
+                        <ul class="list-unstyled text-small">
+                        <li><a href="#">Cool stuff</a></li>
+                        <li><a href="#">Random feature</a></li>
+                        <li><a href="#">Team feature</a></li>
+                        <li><a href="#">Stuff for developers</a></li>
+                        <li><a href="#">Another one</a></li>
+                        <li><a href="#">Last time</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md">
+                        <h5>Resources</h5>
+                        <ul class="list-unstyled text-small">
+                        <li><a href="#">Resource</a></li>
+                        <li><a href="#">Resource name</a></li>
+                        <li><a href="#">Another resource</a></li>
+                        <li><a href="#">Final resource</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md">
+                        <h5>About</h5>
+                        <ul class="list-unstyled text-small">
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Locations</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Terms</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+
+                    </div>
+                </div>
             </div>
         </footer>
-    </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>

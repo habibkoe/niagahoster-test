@@ -1,0 +1,38 @@
+{
+    "message": "Success",
+    "data": [
+        {
+            "name": "Bayi",
+            "description": "<b>0.5X RESOURCE POWER</b><br><b>500 MB</b> Disk Space<br><b>Umlimited</b> Bandwidth<br><b>Umlimited</b> Database<br><b>1</b> Domain<br><b>Instant</b> Backup<br><b>Umlimited SSL</b> Gratis Selamanya",
+            "price": 19900,
+            "promo_price": 14900,
+            "customer_total": 938,
+            "is_popular": false
+        },
+        {
+            "name": "Pelajar",
+            "description": "<b>1X RESOURCE POWER</b><br><b>Unlimited</b> Disk Space<br><b>Umlimited</b> Bandwidth<br><b>Umlimited</b> POP3 Email<br><b>Umlimited</b> Database<br><b>10</b> Addon Domains<br><b>Instant</b> Backup<br><b>Domain Gratis</b> Selamanya<br><b>Umlimited SSL</b> Gratis Selamanya",
+            "price": 46900,
+            "promo_price": 23450,
+            "customer_total": 4168,
+            "is_popular": false
+        },
+        {
+            "name": "Personal",
+            "description": "<b>2X RESOURCE POWER</b><br><b>Unlimited</b> Disk Space<br><b>Umlimited</b> Bandwidth<br><b>Umlimited</b> POP3 Email<br><b>Umlimited</b> Database<br><b>Unlimited</b> Addon Domains<br><b>Instant</b> Backup<br><b>Domain Gratis</b> Selamanya<br><b>Umlimited SSL</b> Gratis Selamanya<br><b>Private</b> Name Server<br><b>SpamAssasin</b> Mail Protection",
+            "price": 109900,
+            "promo_price": 65900,
+            "customer_total": 3552,
+            "is_popular": true
+        },
+        {
+            "name": "Bisnis",
+            "description": "<b>3X RESOURCE POWER</b><br><b>Unlimited</b> Disk Space<br><b>Umlimited</b> Bandwidth<br><b>Umlimited</b> POP3 Email<br><b>Umlimited</b> Database<br><b>Unlimited</b> Addon Domains<br><b>Magic Auto</b> Backup & Restore<br><b>Domain Gratis</b> Selamanya<br><b>Umlimited SSL</b> Gratis Selamanya<br><b>Private</b> Name Server<br><b>Prioritas</b> Layanan Support<br><b>SpamAssasin</b> Pro Mail Protection",
+            "price": 109900,
+            "promo_price": 65900,
+            "customer_total": 3552,
+            "is_popular": false
+        }
+    ]
+
+}

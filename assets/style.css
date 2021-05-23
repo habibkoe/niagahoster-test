@@ -18,11 +18,25 @@ html {
     padding: 2rem 1rem;
     margin-bottom: 2rem;
     background-color: white;
-    border-radius: .3rem;
+    border-radius: 0 !important;
     border-bottom: 0.1rem solid #ddd;
+}
+
+.footer-grey {
+  padding: 2rem 1rem;
+  background-color: #f9fafc;
+}
+
+.footer-blue {
+  padding: 2rem 1rem;
+  background-color: #3697ff;
 }
 
 .navbar-toggler {
     background-color: transparent;
     border: 1px solid grey !important;
+}
+
+footer li a {
+  color: white !important;
 }
